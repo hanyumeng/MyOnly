@@ -15,9 +15,12 @@ a{
 img{
 	border:0;
 }
-
-.w{
+#bigBox{
 	width: 80%;
+	margin: 0 auto;
+}
+.w{
+	width: 100%;
 	margin: 0 auto;
 }
 
@@ -97,7 +100,7 @@ img{
 }
 .navClass .nav-li .nav-a{
 		padding-top: 14px;
-		padding-bottom: 14px;
+		padding-bottom: 12px;
 		display: block;
 		width: 100%;
 		font-size:14px;
@@ -106,19 +109,19 @@ img{
 .navClass .nav-li:last-child{
 	border-right:0;
 }
-.navClass .nav-li .nav-a:hover{
-	background: black;
-	color: white;
-}
+
 
 .navClass .box1{
 	padding-left: 10px;
 	padding-bottom: 50px;
-	height: 200px;
 	position: absolute;
-	top: 44px;
+	top: 45px;
 	left: 0;
-	background: #CCCCCC;
+	display: none;
+	z-index: 2;
+}
+.navClass .changbox{
+	width: 99%;
 }
 /*.navClass .box1 a{
 	display: block;
@@ -134,13 +137,21 @@ img{
 	color: black;
 }
 .navClass .box1 ul li:first-child{
-	border-bottom: 1px solid black;
+	border-bottom: 2px solid black;
 	text-indent: 10px;
 }
-.navClass .box ul li a{
-	line-height: 20px;
+.navClass .box1 ul li{
+	line-height: 25px;
+	margin-bottom: 5px;
+}
+.navClass .nav-li .nav-a:hover{
+	background: black;
+	color: white;
 }
 
+.swiper-container{
+	width: 100%;
+}
 /*footernav*/
 .footernavClass{
 		height:16px;
@@ -184,4 +195,59 @@ img{
 #footeradress p{
 	font-size: 14px;
 	line-height: 42px;
+}
+/*rightBox*/
+#rigthBox{
+	position: fixed;
+	left:90%;
+	top: 120px;
+	width: 70px;
+	height:270px;
+}
+#rigthBox .box11{
+	display: block;
+	width: 66px;
+	border: 2px solid black;
+	background: black;
+	margin-bottom: 1px;
+	height: 66px;
+	text-align: center;
+}
+#rigthBox .box11 i{
+	font-size: 40px;
+	color: white;
+}
+#rigthBox .box11 p{
+	font-size: 14px;
+	color: white;
+}
+#rigthBox .box111{
+	display: block;
+	width: 66px;
+	border: 2px solid black;
+	background: red;
+	margin-bottom: 1px;
+	height: 66px;
+	text-align: center;
+}
+#rigthBox .box111 i{
+	font-size: 40px;
+	color: white;
+}
+#rigthBox .box111 p{
+	font-size: 14px;
+	color: white;
+}
+#rigthBox .box3{
+	position: relative;
+}
+#rigthBox .box3 img{
+	display: none;
+	z-index: 100;
+	position: absolute;
+	left: -150px;
+	top: -42px;
+}
+#rigthBox .box3:hover img{
+	display: block;
 }

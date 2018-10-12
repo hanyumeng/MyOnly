@@ -2,7 +2,7 @@ var gulp = require("gulp");
 
 gulp.task("copy-html",function(){
 	//gulp.src("index.html").pipe(gulp.dest("dist"));
-	gulp.src("index1.html")
+	gulp.src("../MyOnly/**/*.html")
 	.pipe(gulp.dest("D:\\phpStudy\\WWW\\only\\demo"));
 });
 gulp.task("copy-html1.1",function(){
@@ -21,7 +21,11 @@ gulp.task("data2",function(){
 	gulp.src("css/*.css")
 	.pipe(gulp.dest("D:\\phpStudy\\WWW\\only\\demo\\css"));
 });
-gulp.task("build",["copy-html","copy-html1.1","imgs","data1","data2"],function(){
+gulp.task("data3",function(){
+	gulp.src("font/*.css")
+	.pipe(gulp.dest("D:\\phpStudy\\WWW\\only\\demo\\font"));
+});
+gulp.task("build",["copy-html","copy-html1.1","imgs","data1","data2","data3"],function(){
 	console.log("ok");
 });
 gulp.task("watch",function(){
@@ -30,4 +34,5 @@ gulp.task("watch",function(){
 	gulp.watch("img/**/*",["imgs"]);
 	gulp.watch("js/*.js",["data1"]);
 	gulp.watch("css/*.css",["data2"]);
+	gulp.watch("font/*.css",["data3"]);
 });
