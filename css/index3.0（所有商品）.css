@@ -1,0 +1,180 @@
+/*allGoods*/
+#allGoods{
+	width:100%;
+	height:30px;
+	background: #f5f5f5;
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+#allGoods p{
+	font-size:8px;
+	text-indent: 10px;
+	line-height: 30px;
+}
+/*allbBanner*/
+#allbBanner{
+	height:auto;
+	width:100%;
+}
+#allbBanner img{
+	width: 100%;
+	height:auto;
+}
+/*bigDiv*/
+#bigDiv{
+	width: 100%;
+	height: auto;
+	background: white;
+	clear: both;
+	display: flex;
+	margin-bottom:30px ;
+}
+/*leftDiv*/
+#outleftDiv{
+	width: 20%;
+	margin-right: 10px;
+}
+#leftDiv{
+	width: 100%;
+	background: white;
+	border: 1px solid black;
+}
+
+#leftDiv .allP{
+	background: black;
+	color: white;
+	width: 100%;
+	height: 28px;
+	line-height: 28px;
+	font-size: 12px;
+	text-indent: 10px;
+}
+#leftDiv #downall{
+	width: 100%;
+}
+#leftDiv .bigdown{
+	width: 90%;
+	margin: 0 auto;
+}
+#leftDiv .allLis{
+	height: 35px;
+	background: white;
+	display: flex;
+	justify-content: space-between;
+	border-top: 1px solid black;
+}
+#leftDiv .allLisOne{
+	border-top: 0;
+}
+#leftDiv .allspans{
+	display: block;
+	font-weight: 600;
+	background: white;
+	font-size: 16px;
+	line-height: 35px;
+}
+#leftDiv .allInLis li{
+	height: 35px;
+	background: white;
+	border-top: 1px dashed black;
+	margin-bottom: 10px;
+}
+#leftDiv .allInLis{
+	padding-left: 10px;
+	padding-right: 10px;
+	display: none;
+}
+#leftDiv .allInLis li a{
+	line-height: 35px;
+	height: 35px;
+	margin-left: 10px;
+	font-size: 12px;
+	color: black;
+}
+/*rightDiv*/
+#rightDiv{
+	width: 80%;
+	/*height: 834px;*/
+	background: white;
+}
+/*rightUpDiv*/
+#rightUpDiv{
+	width: 100%;
+	height: 35px;
+	border-bottom: 1px solid #CCCCCC;
+	display: flex;
+	margin-bottom: 20px;
+}
+
+#rightUpDiv #da{
+	width: 56px;
+	height: 25px;
+	text-align: center;
+	line-height: 25px;
+	font-size: 12px;
+	border: 1px solid #999999;
+	margin-right: 26px;
+}
+
+#rightUpDiv #select1{
+	font-size: 12px;
+	line-height: 27px;
+	margin-right: 26px;
+}
+/*rightCenterDiv*/
+.fourgoodsBox{
+	display: flex;
+	margin-bottom: 30px;
+}
+.goodsBox{
+	position: relative;
+	text-align: center;
+	margin-right: 10px;
+	flex: 1;
+}
+.goodsBox:last-child{
+	margin-right: 0;
+}
+.goodsBox .goodimgs{
+	width: 100%;
+	margin-bottom: 15px;
+}
+.goodsBox .goodimgs1{
+	width: 100%;
+	margin-bottom: 15px;
+	display: none;
+}
+.goodsBox p a{
+	font-size: 12px;
+	color: black;
+	line-height: 24px;
+}
+.goodsBox .goodsCar{
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	right: 6px;
+	bottom: 50px;
+}
+.goodsBox .fastLook{
+	width: 70px;
+	height: 22px;
+	font-size: 14px;
+	position: absolute;
+	right: 6px;
+	top: 0;
+	background: black;
+	color: white;
+	display: none;
+}
+/*rightDownDiv*/
+#rightDownDiv{
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	font-size: 18px;
+	text-align: center;
+	background: #e2e2e2;
+}
+
+/*# sourceMappingURL=index2.0.css.map */

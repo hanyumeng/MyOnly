@@ -296,8 +296,11 @@
 				<i class="iconfont icon-qiabao"></i><p>二维码</p>
 			</a>
 			<a href="#" class="box11 box3">
-				<i class="iconfont icon-erweima1"></i><p>加入我们</p>
+				<i class="iconfont icon-erweima"></i><p>加入我们</p>
 				<img src="img/erweima.bmp"/>
+			</a>
+			<a href="#" class="box11 returnBox">
+				<i class="iconfont icon-fanhui3"></i><p>返回顶部</p>
 			</a>
 		</div>
 	</body>
@@ -334,7 +337,7 @@
         }
     });
 
-
+//搜索框
 $(function(){
 	$(".abc").click(function(){
 		$(this).animate({
@@ -363,7 +366,7 @@ $(function(){
 	});
 });
 
-
+//下拉菜单
 $(function(){
 	$(".nav-li").each(function(){
 		var left1 = $(this).position().left;
@@ -387,6 +390,7 @@ $(function(){
 		)
 	});
 });	
+//右边固定盒子
 $(function(){
 	$(".box11").each(function(){
 		$(this).hover(
@@ -427,6 +431,19 @@ $(function(){
 						color:"white"
 					});
 			}
-	)
+	);
+//	返回顶部
+	$(window).scroll(function(){
+		let offSetTop = document.documentElement.scrollTop||document.body.scrollTop;
+		if(offSetTop>1000){
+			$("#rigthBox .returnBox").css({
+				display:"block"
+			});
+		}else{
+			$("#rigthBox .returnBox").css({
+				display:"none"
+			});
+		}
+	});
 });
 </script>

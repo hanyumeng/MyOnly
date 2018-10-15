@@ -29,7 +29,7 @@ gulp.task("build",["copy-html","copy-html1.1","imgs","data1","data2","data3"],fu
 	console.log("ok");
 });
 gulp.task("watch",function(){
-	gulp.watch("index1.html",["copy-html"]);
+	gulp.watch("../MyOnly/**/*.html",["copy-html"]);
 	gulp.watch("index1.1（加入轮播图jquery）.html",["copy-html1.1"]);
 	gulp.watch("img/**/*",["imgs"]);
 	gulp.watch("js/*.js",["data1"]);
