@@ -4,12 +4,13 @@
 	background: #f2f2f2;
 	margin-bottom: 10px;
 }
-
+/*内容盒子*/
 .contentDiv{
 	background: pink;
 	display: flex;
 	position: relative;
 }
+/*左边点击轮播*/
 .leftSlider{
 	width: 112px;
 	height: 500px;
@@ -49,6 +50,7 @@
 .leftSlider .sliderBox img:last-child{
 	margin-bottom: 4px;
 }
+/*展示图片盒子*/
 .showBox{
 	width:315px;
 	height: 500px;
@@ -61,6 +63,7 @@
 	width:315px;
 	height: 500px;
 }
+/*镜子盒子*/
 .showBox .mirrorBox{
 	position: absolute;
 	left: 0;
@@ -72,11 +75,13 @@
 	border: 1px solid #CCCCCC;
 	display: none;
 }
+/*右边内容购物*/
 .rightContent{
 	width: 100%;
 	height: 500px;
 	background: wheat;
 }
+/*右边放大效果盒子*/
 .rightBigImg{
 	position: absolute;
 	right: 0;
@@ -89,6 +94,8 @@
 	background-size:945px 1500px ;/*放大三倍*/
 	background-position:0px 0px;
 }
+
+/*右边拍宝贝 选尺码盒子*/
 .rightContent h6{
 	font-size: 16px;
 	line-height: 20px;
@@ -125,27 +132,55 @@
 	border-bottom: 2px solid #ff0000;
 	color: #ff0000;
 }
-					/*<div class="chooseSize">
-						<p class="sizeP">请选择尺码</p><span class="jianjian"></span>
-						<div class="sizeBox">
-							<p class="sizeP">155/76A/XS</p><span class="clothNum">27件</span>
-							<p class="sizeP">155/76A/XS</p><span class="clothNum">27件</span>
-							<p class="sizeP">155/76A/XS</p><span class="clothNum">27件</span>
-							<p class="sizeP">155/76A/XS</p><span class="clothNum">27件</span>
-							<p class="sizeP">155/76A/XS</p><span class="clothNum">27件</span>
-						</div>
-					</div>*/
+					
 .chooseSize{
-	width:300px;
-	border-bottom: 1px solid black;
-	border-top: 1px solid black;
+	width:485px;
+	
 	height: auto;
 }
+
+.chooseSize .sizeP{
+	font-size: 16px;
+	height: 35px;
+	line-height: 35px;
+	vertical-align: middle;
+}
+.chooseSize .sizeP1{
+	font-weight: 600;
+	display: inline-block;
+}
+.chooseSize .sizeP{
+	font-size: 16px;
+	display: inline-block;
+}
+
+.chooseSize .jianjian{
+	display: inline-block;
+	float: right;
+	width: 0;
+	height:0;
+	border: 10px solid transparent;
+	border-top-color: black; 
+	margin-top: 10px;
+}
 .sizeBox{
-	width: 100%;
+	width: 300px;
+	display: none;
 }
 .clothNum{
-	/*display: inline-block;*/
+	display: inline-block;
+	float: right;
+}
+.chooseSize .p-Span{
+	display: inline-block;
+	border-bottom: 1px solid black;
+	border-top: 1px solid black;
 	width: 300px;
+}
+.chooseSize .p-Span-right{
+	display: inline-block;
+	/*float: right;*/
+	width: 170px;
 	height: 35px;
+	background: yellow;	
 }
