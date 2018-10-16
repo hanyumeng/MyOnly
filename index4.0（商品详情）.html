@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>only首页所有商品页面</title>
+		<title>only商品详情</title>
 		<link rel="stylesheet" type="text/css" href="css/index1.css"/>
 		<link rel="stylesheet" type="text/css" href="css/common.css"/>
 		<link rel="stylesheet" type="text/css" href="css/iconfont.css">
@@ -152,10 +152,14 @@
 					<div class="upjian"><img src="img/upjian.jpg"/></div>
 					<div class="sliderBox">
 						<div class="imgBox">
+							<img src="img/description_2_data/1529495919777.jpg"/>
 							<img src="img/118308501H28_p1_003.jpg"/>
 							<img src="img/description_2_data/1529495924257.jpg"/>
 							<img src="img/description_2_data/1529495919777.jpg"/>
 							<img src="img/description_2_data/1529495920747.jpg"/>
+							<img src="img/118308501H28_p1_003.jpg"/>
+							<img src="img/description_2_data/1529495924257.jpg"/>
+							<img src="img/description_2_data/1529495919777.jpg"/>
 						</div>
 					</div>
 					<div class="downjian"><img src="img/downjian.jpg"/></div>
@@ -179,30 +183,68 @@
 						</div>
 						<div class="sizeBox">
 							<div class="s-Span-size">
-								<p class="sizeP">155/76A/XS</p><span class="clothNum">27件</span>
+								<p class="sizeP">155/76A/XS</p><span class="clothNum"><span class="c-Num">27</span>件</span>
 							</div>
 							<div class="s-Span-size">
-								<p class="sizeP">160/80A/S</p><span class="clothNum">27件</span>
+								<p class="sizeP">160/80A/S</p><span class="clothNum"><span class="c-Num">43</span>件</span>
 							</div>
 							<div class="s-Span-size">
-								<p class="sizeP">165/84A/M</p><span class="clothNum">27件</span>
+								<p class="sizeP">165/84A/M</p><span class="clothNum"><span class="c-Num">54</span>件</span>
 							</div>
 							<div class="s-Span-size">
-								<p class="sizeP">170/88A/L</p><span class="clothNum">27件</span>
+								<p class="sizeP">170/88A/L</p><span class="clothNum"><span class="c-Num">67</span>件</span>
 							</div>
 							<div class="s-Span-size">
-								<p class="sizeP">175/92A/XL</p><span class="clothNum">27件</span>
+								<p class="sizeP">175/92A/XL</p><span class="clothNum"><span class="c-Num">34</span>件</span>
 							</div>
-							
+						</div>
+						<!--改变数量-->
+						<div class="p-Span-right">
+							<p class="buyNum">1</p>
+							<div class="add-cut">
+								<img src="img/add.gif" class="addSpan"/>
+								<img src="img/cut.gif" class="cutSpan"/>
+							</div>
+							<p class="storeNumP">库存：<span class="storeNum">241</span>件</p>
 						</div>
 					</div>
+					<div class="add-in">
+						<div class="add-in-car">加入购物车</div>
+						<div class="add-in-fast">立即购买</div>
+					</div>
+					<div class="proMess">
+						<h5 class="proMessW">产品信息</h5>
+						<img class="proMessR" src="img/rightProMess.jpg"/>
+					</div>
+					<h5 class="moreMess">面料：聚酯纤维89%粘纤9%氨纶2%,里料：聚酯纤维100%,</h5>
+					<div class="server">
+						<p class="serverP">联系客服</p>
+						<i class="iconfont icon-ziyuanjk"></i>
+					</div>
+					
 					
 				</div>
 				<div class="rightBigImg"><!--右面放大后图片盒子-->
 				</div>
 			</div>
 			
-			
+				
+			<!--showMore显示详细大图-->
+			<div id="showMore" class="w">
+				<img src="img/description_2_data/1529495919161.jpg"/>
+				<img src="img/description_2_data/1529495919777.jpg"/>
+				<img src="img/description_2_data/1529495919997.jpg"/>
+				<img src="img/description_2_data/1529495920747.jpg"/>
+				<img src="img/description_2_data/1529495921546.jpg"/>
+				<img src="img/description_2_data/1529495922349.jpg"/>
+				<img src="img/description_2_data/1529495923137.jpg"/>
+				<img src="img/description_2_data/1529495923272.jpg"/>
+				<img src="img/description_2_data/1529495923586.jpg"/>
+				<img src="img/description_2_data/1529495923949.jpg"/>
+				<img src="img/description_2_data/1529495924734.jpg"/>
+				<img src="img/description_2_data/1529495927924.jpg"/>
+				<img src="img/ON.jpg"/>
+			</div>
 			
 			<!--footernav-->
 			<div id="footernav" class="w">
@@ -237,7 +279,7 @@
 				<i class="iconfont icon-iconset0308"></i><p>购物车</p>
 			</a>
 			<a href="#" class="box11">
-				<i class="iconfont icon-ziyuanjk"></i><p>钱包</p>
+				<i class="iconfont icon-ziyuanjk"></i><p>客服热线</p>
 			</a>
 			<a href="#" class="box111">
 				<i class="iconfont icon-qiabao"></i><p>会员中心</p>
@@ -371,6 +413,45 @@ $(function(){
 
 //左边slider放大镜
 
+//slider点击左边图片选项图片滚动
+$(function(){
+//	点击上下箭头滚动图片
+	$(".upjian").click(function(){
+		
+		
+		let offsetTop1 = ($(".imgBox").offset().top)-254;
+		console.log(offsetTop1);
+		$(".imgBox").animate({
+			"top":(offsetTop1-180)+"px"
+		},1000);
+		
+//		if(offsetTop1<=254-540){
+//			$(".imgBox").css({
+//				"top":"0px"
+//			});
+//		}
+	});
+	$(".downjian").click(function(){
+		let offsetTop2 = ($(".imgBox").offset().top)-254;
+		console.log(offsetTop2);
+		$(".imgBox").animate({
+			"top":(offsetTop2+180)+"px"
+		},1000);
+	});
+
+//	点击图片改变边框颜色   同时改变imgBox的top
+	$(".imgBox>img").each(function(){
+		$(".imgBox>img").click(function(){
+			$(this).css({
+				border:"1px solid black"
+			})
+			$(this).siblings().css({
+				border:"1px solid #CCC"
+			})
+		});
+	});
+});
+
 
 //镜子函数
 function mirrorFunc(){
@@ -403,9 +484,8 @@ function mirrorFunc(){
 			backgroundPosition:(-1*2*left1)+"px "+(-1*2*top1)+"px"
 		});
 }
+
 //显示隐藏函数
-
-
 $(function(){
 	$(".showBox").mouseover(function(event){
 		let evt = event || window.event;
@@ -424,7 +504,7 @@ $(function(){
 		mirrorFunc();
 	});
 	
-	//获取所有的img
+	//获取所有的img 点击换图片
 	let imgs = $(".imgBox").children("img");
 	imgs.each(function(){
 		$(this).click(function(){
@@ -439,7 +519,7 @@ $(function(){
 
 
 
-
+//右边盒子的各种参数
 $(function(){
 	//右边盒子的选择颜色 切换框
 	$(".B-span").click(function(){
@@ -465,9 +545,6 @@ $(function(){
 		$(this).click(function(){
 			let str = $(this).children("p").html();
 			$(".sizeP1").html(str);
-//			$(".sizeBox").css({
-//				display:"none"
-//			});
 			$(this).css({
 				fontWeight:600,
 				background:"#CCC"
@@ -479,9 +556,50 @@ $(function(){
 			$(".sizeBox").css({
 				display:"none"
 			});
+			let numStr = $(this).find(".c-Num").html();
+			$(".storeNum").html(numStr);
 		});
 	});
-
+//	产品详情盒子消失和显示
+	$(".proMess").click(function(){
+		$(".moreMess").slideToggle(200);
+	});
+	
+//	划过立即购买背景色变红
+	$(".add-in-fast").hover(
+		function(){
+			$(this).css({
+				backgroundColor:"black"
+			});
+		},
+		function(){
+			$(this).css("background","red");
+		}
+	);
+	$(".serverP").hover(
+		function(){
+			$(this).css({
+				color:"#CCC"
+			});
+		},
+		function(){
+			$(this).css("color","black");
+		}
+	);
+	
+//	点击上尖号,数量加一 下尖头 数量减一
+	$(".addSpan").click(function(){
+		let goodsNum = parseInt($(".buyNum").html());
+		$(".buyNum").html(goodsNum+1);
+	})
+	$(".cutSpan").click(function(){
+		let goodsNum = parseInt($(".buyNum").html());
+		if(goodsNum==1){
+			$(".buyNum").html(goodsNum);
+		}else{
+			$(".buyNum").html(goodsNum-1);
+		}
+	})
 });
 
 

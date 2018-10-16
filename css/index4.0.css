@@ -6,55 +6,64 @@
 }
 /*内容盒子*/
 .contentDiv{
-	background: pink;
+	/*background: pink;*/
 	display: flex;
 	position: relative;
+	margin-bottom: 8px;
 }
 /*左边点击轮播*/
 .leftSlider{
 	width: 112px;
 	height: 500px;
-	background: wheat;
+	/*background: wheat;*/
 	margin-right: 20px;
 }
 .leftSlider .upjian{
 	width: 112px;
 	height: 20px;
-	background: yellow;
+	background: #f2f2f2;
 	text-align: center;
 }
 .leftSlider .downjian{
 	width: 112px;
 	height: 20px;
-	background: yellow;
+	background: #f2f2f2;
 	text-align: center;
 }
 .leftSlider .sliderBox{
 	width: 112px;
 	height: 460px;
-	background: lightskyblue;
+	/*background: lightskyblue;*/
 	overflow: hidden;
+	position: relative;
+	margin-bottom: 4px;
 }
 
 .leftSlider .sliderBox .imgBox{
-	width: 100%;
+	width: 112px;
 	overflow: hidden;
+	position: absolute;
+	left: 0px;
+	top: -180px;
 }
 .leftSlider .sliderBox img{
 	display: block;
-	border: 1px solid black;
+	border: 1px solid #CCCCCC;
 	width: 110px;
-	height: auto;
+	height: 174px;
+	margin-bottom: 4px;/*高+两个border+margin-top=180*/
+}
+.leftSlider .sliderBox img:first-child{
 	margin-top: 4px;
 }
-.leftSlider .sliderBox img:last-child{
-	margin-bottom: 4px;
+.leftSlider .sliderBox img:nth-child(2){
+	border: 1px solid black;
 }
 /*展示图片盒子*/
 .showBox{
 	width:315px;
 	height: 500px;
-	background: #ac0;
+	/*background: #ac0;*/
 	border:1px solid black ;
 	margin-right: 20px;
 	position: relative;
@@ -70,7 +79,7 @@
 	top: 0;
 	width:100px;
 	height: 100px;
-	background: pink;
+	background: #F2F2F2;
 	opacity: 0.5;
 	border: 1px solid #CCCCCC;
 	display: none;
@@ -79,7 +88,7 @@
 .rightContent{
 	width: 100%;
 	height: 500px;
-	background: wheat;
+	/*background: wheat;*/
 }
 /*右边放大效果盒子*/
 .rightBigImg{
@@ -114,7 +123,7 @@
 }
 .rightContent h5{
 	font-size: 12px;
-	font-weight: 600;
+	font-weight: 100;
 	line-height: 28px;
 }
 .rightContent .B-span{
@@ -134,9 +143,12 @@
 }
 					
 .chooseSize{
-	width:485px;
-	
+	width:300px;
+	border-bottom: 1px solid black;
+	border-top: 1px solid black;
 	height: auto;
+	position: relative;
+	margin-bottom: 15px;
 }
 
 .chooseSize .sizeP{
@@ -170,17 +182,107 @@
 .clothNum{
 	display: inline-block;
 	float: right;
+	margin-right: 10px;
 }
 .chooseSize .p-Span{
 	display: inline-block;
-	border-bottom: 1px solid black;
-	border-top: 1px solid black;
 	width: 300px;
 }
 .chooseSize .p-Span-right{
+	position: absolute;
+	left: 312px;
+	top: 0;
 	display: inline-block;
 	/*float: right;*/
 	width: 170px;
 	height: 35px;
-	background: yellow;	
+	/*background: yellow;*/	
+}		
+/*商品数量选择盒子*/		
+.p-Span-right .buyNum{
+	width: 22px;
+	height: 22px;
+	border: 1px solid #999999;
+	text-align: center;
+	line-height: 22px;
+	display: inline-block;
+}
+.p-Span-right .add-cut{
+	width: 22px;
+	height: 22px;
+	display: inline-block;
+}
+.p-Span-right .add-cut img{
+	display: block;
+	margin-top: 4px;
+}
+.p-Span-right .storeNumP{
+	display: inline-block;
+	font-weight: 600;
+}
+.p-Span-right .storeNumP .storeNum{
+	color: red;
+	font-weight:600;
+	margin-right: 5px;
+}
+/*加入购物车*/
+.add-in{
+	/*width:;*/
+	height:30px;
+	display: flex;
+}
+.add-in .add-in-car{
+	width: 150px;
+	height: 30px;
+	font-size: 12px;
+	background: black;
+	color: white;
+	text-align: center;
+	line-height: 30px;	
+	margin-right: 8px;
+}
+/*立即购买*/
+.add-in .add-in-fast{
+	width: 150px;
+	height: 30px;
+	font-size: 12px;
+	background: red;
+	color: white;
+	text-align: center;
+	line-height: 30px;	
+}
+/*商品详情*/
+.proMess{
+	position: relative;
+}
+.proMessW{
+	border-bottom: 1px solid black;
+}
+.proMessR{
+	position:absolute;
+	right: 0;
+	top: -2px;
+}
+.moreMess{
+	height: 55px;
+	/*background: paleturquoise;*/
+}
+/*联系客服盒子*/
+.server{
+	margin-top: 10px;
+	display: flex;
+	vertical-align: middle;
+}
+.serverP{
+	font-size: 16px;
+}
+.server i{
+	margin-top: 3px;
+	background:;
+}
+/*showMore*/
+#showMore img{
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 38px;
 }

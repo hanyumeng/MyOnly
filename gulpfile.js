@@ -30,7 +30,7 @@ gulp.task("data3",function(){
 gulp.task("sass",function(){
     gulp.src("*.scss")
     .pipe(sass())
-    .pipe(gulp.dest("css"))
+    .pipe(gulp.dest("css"));
 })
 
 gulp.task("build",["copy-html","copy-html1.1","imgs","data1","data2","data3","sass"],function(){
