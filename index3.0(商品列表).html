@@ -583,7 +583,7 @@
 				<i class="iconfont icon-iconset0308"></i><p>购物车</p>
 			</a>
 			<a href="#" class="box11">
-				<i class="iconfont icon-ziyuanjk"></i><p>钱包</p>
+				<i class="iconfont icon-ziyuanjk"></i><p>客服热线</p>
 			</a>
 			<a href="#" class="box111">
 				<i class="iconfont icon-qiabao"></i><p>会员中心</p>
@@ -599,120 +599,12 @@
 	</body>
 </html>
 <script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
+<script type="text/javascript" src="js/common.js" ></script>
 <script type="text/javascript">
-
-//搜索框拉伸动画
-
+//公共jQuery
 $(function(){
-	$(".abc").click(function(){
-		$(this).animate({
-			width:"200px"
-		},500);
-		$(this).css({
-			border:"1px solid skyblue",
-			borderRight:"1px solid white"
-		});
-		$(".def").css({
-			border:"1px solid skyblue",
-			borderLeft:"1px solid white"
-		});
-	});
-	$(".box1 ul li:first-child").children("a:first-child").css({
-		fontWeight:"600",
-		lineHeight:"35px"
-	});
-	$(".box1 ul li:first-child").css({
-		"margin-bottom":"25px",
-		"margin-top":"14px"
-	});
-	$(".box1").css({
-		background:"#ffffff",
-		border:"1px solid #999999"
-	});
-});
-
-//下拉框fadeInfadeOut
-$(function(){
-	$(".nav-li").each(function(){
-		var left1 = $(this).position().left;
-		$(this).find(".box1").css({
-			left:left1	
-		});
-		$(".box1").first().css({
-			left:"0px"
-		});
-		$(this).hover(
-			function(){
-				$(this).find(".box1").fadeIn().css({
-					display:"block"
-				});
-			},
-			function(){
-				$(this).find(".box1").fadeOut().css({
-					display:"none"
-				});
-			}
-		)
-	});
-});	
-
-//右边固定盒子 购物车
-
-$(function(){
-	$(".box11").each(function(){
-		$(this).hover(
-			function(){
-				$(this).css({
-					background:"white"
-				});
-				$(this).children().css({
-					color:"black"
-				});
-			},
-			function(){
-				
-					$(this).css({
-						background:"black"
-					});
-					$(this).children().css({
-						color:"white"
-					});
-			}
-		)
-	})
-	$(".box111").hover(
-			function(){
-				$(this).css({
-					background:"white"
-				});
-				$(this).children().css({
-					color:"black"
-				});
-			},
-			function(){
-				
-					$(this).css({
-						background:"red"
-					});
-					$(this).children().css({
-						color:"white"
-					});
-			}
-	)
-//	返回顶部
-	$(window).scroll(function(){
-		let offSetTop = document.documentElement.scrollTop||document.body.scrollTop;
-		if(offSetTop>500){
-			$("#rigthBox .returnBox").css({
-				display:"block"
-			});
-		}else{
-			$("#rigthBox .returnBox").css({
-				display:"none"
-			});
-		}
-	});
-});				
+	common();
+})
 //左面菜单leftDic拉伸slidedown
 $(function(){
 	$(".allLis").click(function(){

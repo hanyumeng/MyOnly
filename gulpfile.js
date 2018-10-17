@@ -1,6 +1,5 @@
 var gulp = require("gulp");
-//let sass=require("gulp-sass");
-
+var sass=require("gulp-sass");
 gulp.task("copy-html",function(){
 	//gulp.src("index.html").pipe(gulp.dest("dist"));
 	gulp.src("../MyOnly/**/*.html")
@@ -30,13 +29,13 @@ gulp.task("data4",function(){
 	gulp.src("php/*.php")
 	.pipe(gulp.dest("D:\\phpStudy\\WWW\\only\\demo\\php"));
 });
-//gulp.task("sass",function(){
-//  gulp.src("*.scss")
-//  .pipe(sass())
-//  .pipe(gulp.dest("css"));
-//});
+gulp.task("sass",function(){
+    gulp.src("sass/**/*.scss")
+    .pipe(sass())
+    .pipe(gulp.dest("css"));
+});
 
-gulp.task("build",["copy-html","copy-html1.1","imgs","data1","data2","data3","data4"],function(){
+gulp.task("build",["copy-html","copy-html1.1","imgs","data1","data2","data3","data4","sass"],function(){
 	console.log("ok");
 });
 
@@ -50,5 +49,5 @@ gulp.task("watch",function(){
 	gulp.watch("css/*.css",["data2"]);
 	gulp.watch("font/*.css",["data3"]);
 	gulp.watch("php/*.php",["data4"]);
-//	gulp.watch("*.scss",["sass"]);
+	gulp.watch("sass/**/*.scss",["sass"]);
 });
