@@ -1,0 +1,229 @@
+#gotiao{
+	height: 25px;
+	background: black;
+	color: white;
+	text-align: center;
+	line-height: 25px;
+	margin-bottom: 14px;
+}
+
+/*订单步骤*/
+#step{
+	display: flex;
+	margin-bottom: 27px;
+}
+.stepBox{
+	flex: 1;
+	text-align: center;
+	margin-right: 2px;
+}
+.stepBox:last-child{
+	margin-right: 0;
+}
+.stepBox .stepTiao{
+	width: 100%;
+	height: 14px;
+	background: #e5e5e5;
+}
+.stepBox p{
+	margin-bottom: 2px;
+	font-size: 14px;
+	color: #7f7f7f;
+}
+.stepBox .stepTiao1{
+	background: #7f7f7f;
+}
+
+/*订单摘要*/
+#zhaiyao{
+	height: 22px;
+	color: black;
+	font-weight: 600;
+	line-height: 22px;
+	margin-bottom: 14px;
+}
+#rightPage{
+	height: 32px;
+}
+#rightPage .rightSmallbox{
+	float: right;
+}
+#rightPage .rightSmallbox p{
+	display: inline-block;
+	font-size:14px;
+	font-weight: 600;
+}
+#rightPage .rightSmallbox .jian{
+	display: inline-block;
+	width: 18px;
+	height: 16px;
+	text-align: center;
+	line-height: 16px;
+	border: 1px solid #CCCCCC;
+}
+
+/*商品列表表头*/
+.goodslist-table{
+	margin-bottom:8px ;
+	border-bottom: 1px solid #7F7F7F;
+}
+.goodslist-table thead th{
+	height: 35px;
+	border-top: 1px solid #CCCCCC;
+	border-bottom: 1px solid #CCCCCC;
+	font-weight: 100;
+	vertical-align: middle;
+	font-size: 12px;
+	background: #f2f2f2;
+}
+.goodslist-table thead th:first-child{
+	border-left: 1px solid #CCCCCC;
+}
+.goodslist-table thead th:last-child{
+	border-right: 1px solid #CCCCCC;
+}
+.goodslist-table input{
+	vertical-align: middle;
+	margin-left: 10px;
+}
+.goodslist-table img{
+	vertical-align: middle;
+}
+
+.goodslist-table a{
+	color: black;
+	font-size: 12px;
+}
+.goodslist-table p{
+	color: black;
+	font-size: 12px;
+}
+.select-all{
+	text-align: left;
+}
+.select-all label{
+	width: 25px;
+}
+
+/*商品全选第二行*/
+.select-allGoods{
+	height: 37px;
+}
+.select-allGoods .goodsBtn {
+    display: inline-block;
+    padding: 0 10px;
+    background: #414141;
+    border-radius: 10px;
+    vertical-align: middle;
+    color: white;
+}
+
+.goodslist-table tbody tr td img{
+	width: 100px;
+	height: 150px;
+}
+
+.goodslist-table .tbody tr:nth-child(1) td{
+	border-top: 1px solid #7F7F7F;
+}
+.goodslist-table .tbody tr:nth-child(1) td:nth-child(1){
+	border-left: 1px solid #7F7F7F;
+}
+.goodslist-table .tbody tr:nth-child(1) td:last-child{
+	border-right: 1px solid #7F7F7F;
+}
+.goodslist-table .tbody tr:nth-child(2) td:nth-child(1){
+	border-left: 1px solid #7F7F7F;
+}
+.goodslist-table .tbody tr:nth-child(2) td:last-child{
+	border-right: 1px solid #7F7F7F;
+}
+/*.goodslist-table .tbody:last-child tr td{
+	border-bottom: 1px solid #CCCCCC;
+}*/
+.goodslist-table .tbody td{
+	vertical-align: top;
+	text-align: center;
+	padding: 10px 5px;
+}
+/*.goodslist-table tr td input{
+	vertical-align: middle;
+}*/
+/*商品数量盒子*/
+/*.p-Span-right{
+	float: right;
+	width: 170px;
+	height: 35px;
+	background: yellow;	
+}*/
+/*商品数量选择盒子*/	
+/*car-goods-num*/	
+.car-goods-num .p-Span-right .buyNum{
+	width: 22px;
+	height: 22px;
+	border: 1px solid #999999;
+	text-align: center;
+	line-height: 22px;
+	display: inline-block;
+}
+.car-goods-num .p-Span-right .add-cut{
+	width: 22px;
+	height: 22px;
+	display: inline-block;
+}
+.car-goods-num .p-Span-right .add-cut img{
+	display: block;
+	margin-top: 4px;
+}
+.car-goods-num .storeNumP{
+	display: inline-block;
+	font-size: 12px;
+}
+.car-goods-num  .storeNum{
+	color: red;
+	font-weight:600;
+	margin-right: 5px;
+	font-size: 12px;
+}
+.car-goods-num .p-Span-right .addSpan{
+	width: 24px;
+	height:10px;
+}
+.car-goods-num .p-Span-right .cutSpan{
+	width: 24px;
+	height:10px;
+}
+
+.select-down{
+	height: 35px;
+	border: 1px solid #CCCCCC;
+	font-weight: 100;
+	line-height: 35px;
+	font-size: 12px;
+	background: #f2f2f2;
+	margin-bottom: 20px;
+}
+.select-down label{
+	width: 25px;
+	display: inline-block;
+}
+.select-down input{
+	vertical-align: middle;
+	margin-left: 10px;
+}
+
+.goodslist-table .tbody .tr-btn a {
+	display: block;
+	width: 130px;
+    height: 30px;
+    line-height: 30px;
+    border: solid 1px #7F7F7F;
+    color: #7F7F7F;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+}
+.goodslist-table .tbody .tr-btn a:hover{
+	background: #ABADB3;
+	transition: all 0.3s;
+}
+/*# sourceMappingURL=index5.0.css.map */

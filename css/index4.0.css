@@ -251,6 +251,10 @@
 	text-align: center;
 	line-height: 30px;	
 }
+.add-in .add-in-fast:hover{
+	background: black;
+	transition: all .5s;
+}
 /*商品详情*/
 .proMess{
 	position: relative;
@@ -275,6 +279,10 @@
 }
 .serverP{
 	font-size: 16px;
+}
+.serverP:hover{
+	color: #CCCCCC;
+	transition: all .5s;
 }
 .server i{
 	margin-top: 3px;

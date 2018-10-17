@@ -177,4 +177,9 @@
 	background: #e2e2e2;
 }
 
+#rightDownDiv:hover{
+	background:gray;
+	color:white;
+	transition: all .5s;
+}
 /*# sourceMappingURL=index2.0.css.map */
