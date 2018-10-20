@@ -43,7 +43,7 @@
 	font-size:18px ;
 	font-weight: 600;
 }
-#numId{
+.numId{
 	width:237px;
 	height: 24px;
 	border:1px solid #abadb3;
@@ -57,14 +57,14 @@
 	margin-bottom: 10px;
 	outline: none;
 }
-#passId{
+.passId{
 	width:108px;
 	height: 24px;
 	border:1px solid #abadb3;
 	margin-bottom: 10px;
 	outline: none;
 }
-#passSpan{
+.passSpan{
 	display: inline-block;
 	width: 120px;
 	height: 28px;
@@ -74,25 +74,33 @@
 	line-height: 28px;
 	margin-left: 12px;
 }
-#imgPass{
+.img-check{
+	height: 20px;
+	display: none;
+}
+.imgPass{
 	width:108px;
 	height: 22px;
 	border:1px solid #abadb3;
 	margin-left: 65px;
 	margin-bottom: 10px;
 	outline: none;
+	/*display: none;*/
+	float: left;
 }
-#imgPassSpan{
-	display: inline-block;
+.imgPassSpan{
+	float: left;
 	width: 80px;
 	height: 24px;
 	background: #CCCCCC;
 	color: white;
 	vertical-align: middle;
-	line-height: 28px;
+	line-height: 24px;
 	margin-left: 12px;
+	text-align: center;
+	/*display: none;*/
 }
-#loginId{
+.loginId{
 	width:68px;
 	height: 30px;
 	background: black;
@@ -101,6 +109,9 @@
 	margin-top: 10px;
 	outline: none;
 	color: white;
+}
+.get-check{
+	height: 50px;
 }
 label{
 	width:60px;

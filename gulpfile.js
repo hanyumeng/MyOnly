@@ -1,4 +1,4 @@
-var gulp = require("gulp");
+﻿var gulp = require("gulp");
 var sass=require("gulp-sass");
 gulp.task("copy-html",function(){
 	//gulp.src("index.html").pipe(gulp.dest("dist"));
@@ -32,7 +32,7 @@ gulp.task("data4",function(){
 gulp.task("sass",function(){
     gulp.src("sass/**/*.scss")
     .pipe(sass())
-    .pipe(gulp.dest("css"));
+    .pipe(gulp.dest("D:\\phpStudy\\WWW\\only\\demo\\css"));
 });
 
 gulp.task("build",["copy-html","copy-html1.1","imgs","data1","data2","data3","data4","sass"],function(){

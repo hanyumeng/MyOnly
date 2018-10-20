@@ -1,18 +1,23 @@
 function common(){
 	//搜索框
-	$(".abc").click(function(){
+	$(".abc").click(function(){//光标点击
 		
 		$(this).animate({
 			width:"200px"
 		},500);
 		$(this).css({
-			border:"1px solid skyblue",
+			border:"1px solid blue",
 			borderRight:"1px solid white"
 		});
 		$(".def").css({
-			border:"1px solid skyblue",
+			border:"1px solid blue",
 			borderLeft:"1px solid white"
 		});
+	});
+	$(".abc").blur(function(){//光标离开
+		$(this).animate({
+			width:"150px"
+		},500);
 	});
 	
 	//下拉菜单
