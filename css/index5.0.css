@@ -226,4 +226,56 @@
 	background: #ABADB3;
 	transition: all 0.3s;
 }
+
+
+/*总价*/
+.totalBox{
+	width: 100%;
+	height: 190px;
+	padding-top:20px ;
+	display: flex;
+}
+.totalLeft{
+	width: 50%;
+	position: relative;
+}
+.continueShop{
+	width: 90px;
+	height: 30px;
+	text-align: center;
+    line-height: 30px;
+    border: solid 1px #7F7F7F;
+    color: #7F7F7F;
+    position: absolute;
+	left: 0;
+	top: 110px;
+}
+.continueShop:hover{
+	background: #ABADB3;
+	transition: all 0.3s;
+}
+.totalRight{
+	width: 50%;
+}
+.floatRightDiv{
+	float: right;
+}
+.floatRightDiv .moneyP{
+	font-size: 12px;
+	line-height: 30px;
+}
+.floatRightDiv .totalMoney{
+	color: red;
+}
+.jiesuan{
+	float: right;
+	width:70px ;
+	height: 30px;
+	color:white ;
+	background: black;
+	text-align: center;
+	line-height: 30px;
+	margin-top: 20px;
+	font-size: 14px;
+}
 /*# sourceMappingURL=index5.0.css.map */

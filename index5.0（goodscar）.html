@@ -246,7 +246,7 @@
 					<tr class="tr-btn">
 						<td colspan="5"></td>
 						<td colspan="2">
-							<a href="#">从购物车中删除</a>
+							<a href="#" class="deleteCar">从购物车中删除</a>
 						</td>
 					</tr>
 				</tbody>
@@ -298,7 +298,7 @@
 					<tr class="tr-btn">
 						<td colspan="5"></td>
 						<td colspan="2">
-							<a href="#">从购物车中删除</a>
+							<a href="#" class="deleteCar">从购物车中删除</a>
 						</td>
 					</tr>
 				</tbody>
@@ -350,7 +350,7 @@
 					<tr class="tr-btn">
 						<td colspan="5"></td>
 						<td colspan="2">
-							<a href="#">从购物车中删除</a>
+							<a href="#" class="deleteCar">从购物车中删除</a>
 						</td>
 					</tr>
 				</tbody>
@@ -360,6 +360,22 @@
 				<label for="selectAll">全选</label>
 			</div>
 			
+			<div class="totalBox">
+				<div class="totalLeft">
+					<div class="continueShop">
+						继续购物
+					</div>
+				</div>
+				<div class="totalRight">
+					<div class="floatRightDiv">
+						<p class="moneyP"><span>商品总金额：&nbsp;&nbsp;&nbsp;&nbsp;RMB&nbsp;&nbsp;&nbsp;￥&nbsp;&nbsp;&nbsp;</span><span class="totalMoney" style="color: black;">6597</span></p>
+						<p class="moneyP" style="color: red;"><span style="color: red;">应付金额： 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RMB&nbsp;&nbsp;&nbsp;￥&nbsp;&nbsp;&nbsp;</span><span class="totalMoney">6597</span></p>
+						<p class="moneyP" style="color: red;"><span style="color: red;">花费的积分：&nbsp;&nbsp;&nbsp;&nbsp;PTS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="">0</span></p>
+						<div class="jiesuan">结算</div>
+					</div>
+					
+				</div>
+			</div>
 			
 			
 			<!--footernav-->
@@ -419,4 +435,92 @@
 $(function(){
 	common();
 })
+
+
+
+$(function(){
+	
+	
+
+	
+	
+	
+	$(".addSpan").each(function(){
+		var sum = 0;
+		$(this).click(function(){
+			let goodsNum = parseFloat($(this).parent().prev().html());
+			$(this).parent().prev().html(goodsNum+1);
+			//单价
+			let sTotal = parseFloat($(this).parents(".car-goods-num").siblings().children().children(".unit-priceSpan").html());
+//			console.log(sTotal);
+			mTotal = sTotal * (goodsNum+1);
+			//改变总价
+			$(this).parents(".car-goods-num").siblings().children().children(".total-priceSpan").html(mTotal);
+			
+			//改变最终总金额
+			
+			
+			$(".total-priceSpan").each(function(){
+				sum =sum + parseInt($(".total-priceSpan").html());
+				
+			});
+			console.log(sum);
+			
+			//把sum总价的值赋给最后一行的span
+			$(".totalMoney").html(sum);
+				
+		});
+	});
+	$(".cutSpan").each(function(){
+		var sum = 0;
+		$(this).click(function(){
+			let goodsNum = parseFloat($(this).parent().prev().html());
+			if(goodsNum==1){
+				$(this).parent().prev().html(goodsNum);
+				
+			}else{
+				$(this).parent().prev().html(goodsNum-1);
+			}
+			
+			let sTotal = parseFloat($(this).parents(".car-goods-num").siblings().children().children(".unit-priceSpan").html());
+//			console.log(sTotal);
+			mTotal = sTotal * (goodsNum-1);
+			if(goodsNum==1){
+				$(this).parents(".car-goods-num").siblings().children().children(".total-priceSpan").html("2199");
+			}
+			else{
+				$(this).parents(".car-goods-num").siblings().children().children(".total-priceSpan").html(mTotal);
+			}
+			
+			
+			$(".total-priceSpan").each(function(){
+				sum =sum + parseInt($(".total-priceSpan").html());
+				console.log(sum);
+			});
+			
+			
+			//把sum总价的值赋给最后一行的span
+			$(".totalMoney").html(sum);
+		})
+	});
+
+	
+});
+
+//<div class="totalBox">
+//				<div class="totalLeft">
+//					<div class="continueShop">
+//						继续购物
+//					</div>
+//				</div>
+//				<div class="totalRight">
+//					<div class="floatRightDiv">
+//						<p class="moneyP"><span>商品总金额：&nbsp;&nbsp;&nbsp;&nbsp;RMB&nbsp;&nbsp;&nbsp;￥&nbsp;&nbsp;&nbsp;</span><span class="totalMoney" style="color: black;">3846.00</span></p>
+//						<p class="moneyP" style="color: red;"><span style="color: red;">应付金额： 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RMB&nbsp;&nbsp;&nbsp;￥&nbsp;&nbsp;&nbsp;</span><span class="totalMoney">3846.00</span></p>
+//						<p class="moneyP" style="color: red;"><span style="color: red;">花费的积分：&nbsp;&nbsp;&nbsp;&nbsp;PTS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="">0</span></p>
+//						<div class="jiesuan">结算</div>
+//					</div>
+//					
+//				</div>
+//			</div>
 </script>
